@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Js</title>
+	<script type="text/javascript" src="js/angular.min.js"> </script>
+</head>
+	<body>
+		<div ng-app="myapp" ng-controller="biodata" >
+		<table align="center" cellspacing="4" cellpadding="5" border="1">
+			<tr>
+				<td align="center">Nama</td>
+				<td><input type="text" ng-model="nama"></td></br>
+			</tr>
+			<tr>
+				<td align="center">Alamat</td>
+				<td><input type="text" ng-model="alamat"></td></br>
+			</tr>
+			<tr>
+				<td align="center">Umur</td>
+				<td><input type="text" ng-model="umur"></td></br>
+			</tr>
+		</table>
+		<br>
+				<div align="center">
+				Nama Anda   : {{nama}}<br>
+				Alamat      : {{alamat}}<br>
+				Umur        : {{umur}}<br>
+				</div>
+			</div>
+<script>
+	var app = angular.module('myapp',[]);
+	app.controller('biodata',function($scope)
+	{
+		$scope.nama="";
+		$scope.alamat="";
+		$scope.umur="";
+	}
+	);
+</script>
+
+	</body>
+</html>
